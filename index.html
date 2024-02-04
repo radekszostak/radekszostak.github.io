@@ -20,21 +20,34 @@
             <p class="fst-italic">Data scientist</p>
         </div>
     </div>
-    <div class="alert alert-primary" role="alert">
-        <div class="row justify-content-center mb-3">
-            Talk to my chatbot assistant and ask about my skills, projects, education or anything else!
+    <div class="card p-4 mb-3">
+        <div class="row justify-content-center">
+        <p class="fs-5 text-center">Talk to my chatbot assistant and ask about my skills, projects, education or anything else!</p>
         </div>
         <div class="row justify-content-center row-cols-auto">
-            <a href="chatbot.html" class="btn btn-primary"><i class="fa-solid fa-robot"></i> Talk to assistant</a>
+            <button class="btn custom-button btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                🤖 Toggle chatbot
+              </button>
         </div>
     </div>
+
+    <div class="collapse" id="collapseExample">
+        <div class="row mb-3">
+            <iframe
+                src="https://radek-chatbot.streamlit.app/?embed=true&embed_options=light_theme"
+                height="450"
+                style={{ width: "100%", border: "none" }}
+            ></iframe>
+        </div>
+    </div>
+
     <div class="row">
         <h1>Key initiatives</h1>
     </div>
     <div class="row row-cols-1 row-cols-md-2 g-4">
         <div class="col">
             <a class="card-link" href="proj-wse.html">
-                <div class="card h-100">
+                <div class="card custom-card h-100">
                     <img src="img/NeurIPS_logo.png" class="card-img-top object-fit-cover h">
                     <div class="card-body">
                         <h6 class="card-title">Regression of river water level from drone images using CNNs</h6>
@@ -48,7 +61,7 @@
         </div>
         <div class="col">
             <a class="card-link" href="proj-chatbot.html">
-                <div class="card h-100">
+                <div class="card custom-card h-100">
                     <img src="img/langchain.png" class="card-img-top object-fit-cover">
                     <div class="card-body">
                         <h6 class="card-title">Portfolio chatbot</h6>
@@ -62,7 +75,7 @@
         </div>
         <div class="col">
             <a class="card-link" href="proj-calib.html">
-                <div class="card h-100">
+                <div class="card custom-card h-100">
                     <img src="img/thermal-calib.png" class="card-img-top object-fit-cover">
                     <div class="card-body">
                         <h6 class="card-title">Calibration of drone thermal images using gradient descent</h6>
@@ -76,7 +89,7 @@
         </div>
         <div class="col">
             <a class="card-link" href="proj-seg.html">
-                <div class="card h-100">
+                <div class="card custom-card h-100">
                     <img src="img/river_segmentation.png" class="card-img-top object-fit-cover h">
                     <div class="card-body">
                         <h6 class="card-title">Semantic segmentation of water bodies on satellite imagery</h5>
@@ -91,7 +104,7 @@
         </div>
         <div class="col">
             <a class="card-link" href="proj-prompt.html">
-                <div class="card h-100">
+                <div class="card custom-card h-100">
                     <img src="img/prompt_segmentation.png" class="card-img-top object-fit-cover">
                     <div class="card-body">
                         <h6 class="card-title">Aerial images segmentation based on user promted examples</h6>
