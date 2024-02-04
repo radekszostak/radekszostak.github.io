@@ -17,18 +17,20 @@
         <!-- <img src="img/langchain.png" class="subpage-img-top object-fit-cover"> -->
         <h1>Regreession using CNNs</h1>
         <h2>About</h2>
-        <p>In this project convolutional neural networks were employed to unconventional task of regression of continuous numeric value from image data.</p>
+        <p>In this project, convolutional neural networks were employed for the unconventional task of regression, predicting continuous numeric values from image data.</p>
         
         <h2>Introduction</h2>
-        <p>Terrain elevation maps generated using drone photogrammetry often reveal distortions in the water surface impeding the accurate samplig of water level from these maps. This study investigates the capability of convolutional neural networks to accommodate the aforementioned perturbations and effectively estimate water level from photogrammetric rasters.</p>
+        <p>Terrain elevation maps generated using drone photogrammetry often reveal distortions in the water surface, impeding the accurate sampling of water levels from these maps. This study investigates the capability of convolutional neural networks to accommodate the aforementioned perturbations and effectively estimate water levels from photogrammetric rasters.</p>
 
-        <h2>Methodology</h2>
-        <p>The task of proposed machine learning models is to estimate single value of water level given aerial image and elevation map of river and adjacend land as an input.</p>
-        
-        <p>Two regression approaches utilizing CNNs were explored: direct regression employing an encoder and solution based on prediction of the attention mask by an encoder-decoder architecture, subsequently used to sample values from the photogrammetric elevation map.</p>
+        <h2>Methodology</h2>  
+        <p>The proposed machine learning models aim to estimate a single value of water level given an aerial image and an elevation map of the river and adjacent land as input.</p>
+
+        <p>Two regression approaches utilizing CNNs were explored: direct regression employing an encoder and a solution based on the prediction of the attention mask by an encoder-decoder architecture, subsequently used to sample values from the photogrammetric elevation map.</p>
+
+        <p>Interestingly, no ground truth masks are used for training the solution that predicts attention masks. The solution learns to compose masks by itself under the influence of gradient descent optimization with an MSE loss function.</p>
 
         <h3>Results</h3>
-        <p>Using CNN encoder for regression has performed significanty worse than mask sampling solution. This indicates that CNN encoders that are built for image pattern recognition not perform well in task of regression/sampling from input image. However, making appropriate custom modifications that take into account knowledge of the nature of the ML model and data allows for excellent results.</p>
+        <p>Using a CNN encoder for regression performed significantly worse than the mask sampling solution. This indicates that CNN encoders, which are built for image pattern recognition, do not perform well in the task of regression or sampling from input images. However, making appropriate custom modifications that take into account the nature of the ML model and data can lead to excellent results.</p>
         <div class="row justify-content-center row-cols-auto">
             <a href="https://www.preprints.org/manuscript/202401.2109/v1" class="btn custom-button me-3" target="_blank"><i class="fa-solid fa-file"></i> Paper</a>
             <a href="http://github.com/radekszostak/stream-wse-uav-ml" class="btn custom-button" target="_blank"><i class="fa-brands fa-github"></i> Source code</a>

@@ -1,0 +1,53 @@
+<!-- Index website based on bootstrap -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Radek Szostak</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/641bc0146a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<main role="main" class="container main-container my-5">
+    <div class="row">
+        <div class="col">
+        <a href="index.html" class="btn custom-button mb-3"><i class="fa-solid fa-house"></i> Back to home</a>
+        
+        <h1>Time series forecasting of groundwater levels</h1>
+        <p>Presented at the meeting of the project resalized in the framework of the European union program Chist-Era.</p>
+        <p>Based on the book <i>Forecasting: Principles and Practice</i> by Rob J Hyndman and George Athanasopoulos</p>
+
+        <h3>Notebook Configuration:</h3>
+        <p>Solution running in Jupyter Notebook utilizing various Python libraries for data analysis, visualization, and modeling, including Matplotlib, Plotly, Seaborn, Pandas, NumPy, SciPy, and Statsmodels.</p>
+            
+        <h3>Data Description:</h3>
+        <p>The notebook analyzes groundwater level (GWL) data from two measurement stations and corresponding hydrological data (evaporation, runoff, snowmelt, precipitation) obtained from ERA5 dataset. The data has been preprocessed, including gap filling and resampling to a weekly frequency.</p>
+            
+        <h3>Exploratory Data Analysis (EDA):</h3>
+        <p>The EDA section explores various aspects of the time series data, including stationarity, autocorrelation, partial autocorrelation, decomposition into trend, seasonality, and residuals, and periodogram analysis to identify dominant frequencies.<p>
+            
+        <h3>Modelling Workflow:</h3>
+        <p>The modeling section outlines the workflow for predicting groundwater levels:</p>
+        <ul>
+            <li>Fitting a Ridge model using lagged ERA data and the previous time step value of groundwater level as input features.
+            <li>Iteratively building test predictions using lagged ERA data and predicted groundwater levels from previous iterations.</li>
+            <li>Calculating the standard deviation of residuals for each step of the forecast horizon and establishing a 95% confidence interval.</li>
+        </ul>
+  
+        <h3>Results:</h3>
+        <p>The results include visualizations of the predicted groundwater levels alongside the actual data, with a focus on assessing the model's performance through metrics such as root mean square error (RMSE) and confidence intervals.</p>
+
+        <div class="row justify-content-center row-cols-auto">
+            <a href="https://github.com/radekszostak/waterline-time-series-forecasting/blob/main/forecasting.ipynb" class="btn custom-button me-3" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
+        </div>
+    </div>
+    </div>
+
+
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+</body>
+</html>
