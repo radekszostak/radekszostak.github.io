@@ -1,0 +1,42 @@
+<!-- Index website based on bootstrap -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Radek Szostak</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/641bc0146a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<main role="main" class="container main-container my-5">
+    <div class="row">
+        <div class="col">
+        <a href="index.html" class="btn custom-button mb-3"><i class="fa-solid fa-house"></i> Back to home</a>
+        <!-- <img src="img/langchain.png" class="subpage-img-top object-fit-cover"> -->
+        <h1>Calibration using PyTorch</h1>
+        <h2>About</h2>
+        <p>This is an unconventional application of PyTorch for calibration of multiple overlapping aerial thermal images using gradient descent. In this task gradient descent optimization is performed twice: for image position alignment and correction of temperature measurements.</p>
+        
+        <h2>Position alignment</h2>
+        <p>Drone GPS and IMU logging allows for georeferencing of aerial photo. However, due to GPS and IMU uncertainties georeferencing is not precise, which results in misalignments in photos mosaics.</p>
+        <p>Image mosaics can be aligned in post processing. Each pair of overlapping photos is aligned (stithed) using SIFT algorithm provided by OpenCV library. After acquisition of relative positions between each pair of photos gradient descent is used to obtain positions of all photos simultainously which is consensus of all aforementioned pair alignments.</p>
+        <p>During gradient descent optimization parameters of images transformation matrices are tuned. Loss function minimizes differences between transformation matrices obtained in pair alignment with transformation matrices tuned during optimization.</p>
+
+        <h2>Temperature correction</h2>
+        <p>Temperatures measurements made using thermal cameras are prone to biases related to cameras internal component temperature changes. This results in notable differences in temperature measurements of the same object visible on two overlapping thermal images. Gradient descent optimization was used to minimize the difference in temeprature measurements between overlapping images for all images at once. Tunable parameter was bias assigned to each photo and loss function was constructed to minimize temperature difference between overlapping parts of images.</p>
+
+        <div class="row justify-content-center row-cols-auto">
+            <a href="https://www.mdpi.com/2504-446X/7/11/683" class="btn custom-button me-3" target="_blank"><i class="fa-solid fa-file"></i> Paper</a>
+            <a href="https://github.com/radekszostak/aerial-thermal-tuner" class="btn custom-button" target="_blank"><i class="fa-brands fa-github"></i> Source code</a>
+        </div>
+    </div>
+    </div>
+
+
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!-- Index website based on bootstrap -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Radek Szostak</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/641bc0146a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<main role="main" class="container main-container my-5">
+    <div class="row">
+        <div class="col">
+        <a href="index.html" class="btn custom-button mb-3"><i class="fa-solid fa-house"></i> Back to home</a>
+        <!-- <img src="img/langchain.png" class="subpage-img-top object-fit-cover"> -->
+        <h1>Portfolio chatbot</h1>
+        <h2>About</h2>
+        <p>This chatbot is designed to provide information about given person. It utilizes OpenAI's GPT-3.5 model to engage in conversations and retrieve relevant information based on user queries.</p>
+        
+        <h2>Features</h2>
+            <ul>
+                <li>Interactive Conversation: The chatbot engages in interactive conversations with users, responding to their queries and providing relevant information.</li>
+                <li>Contextual Understanding: It maintains context throughout the conversation, allowing for a more natural and coherent interaction.</li>
+                <li>Information Retrieval: The chatbot retrieves additional information from a knowledge base, enhancing its ability to provide comprehensive responses.</li>
+            </ul>
+        
+        <h2>Implementation</h2>
+
+        <p>The app is built using Python and Streamlit, a popular framework for building interactive web applications and data visualizations.
+        </p>
+        <p>Document embedings are generated using OpenAI Embedings API and are stored in FAISS, a library for efficient similarity search and clustering of dense vectors.
+        </p>
+        <p>LangChain is used to incorporate the chat history and the knowledge base into the prompt.
+        </p>
+        <h2>Try it out!</h2>
+        <p>Feel free to interact with the chatbot below. Ask any questions you have about me, and the chatbot will provide you with relevant information.</p>
+        <div class="row justify-content-center row-cols-auto">
+            <a href="chatbot.html" class="btn custom-button me-3"><i class="fa-solid fa-robot"></i> Talk to assistant</a>
+            <a href="http://github.com/radekszostak/streamlit-portfolio-chatbot" class="btn custom-button" target="_blank"><i class="fa-brands fa-github"></i> Source code</a>
+        </div>
+    </div>
+    </div>
+
+
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+</body>
+</html>
